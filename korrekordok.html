@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Körrekordok - NFSU2 Weekly Challenge Hungary</title>
+  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="stylesheet" href="./korrekordok.css?v=2">
+</head>
+<body>
+
+  <header class="hero hero-small">
+    <div class="hero-content">
+      <div class="logo-small">Need for Speed Underground 2</div>
+      <div class="logo-main">Körrekordok</div>
+      <div class="logo-sub">Weekly Challenge Hungary</div>
+    </div>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Főoldal</a>
+    <a href="rolunk.html">Rólunk</a>
+    <a href="szabalyzat.html">Szabályzat</a>
+    <a href="#">Heti versenyek</a>
+    <a href="bajnoksags1.html">Bajnokság S1</a>
+    <a class="active" href="korrekordok.html">Körrekordok</a>
+  </nav>
+
+  <main class="page records-page">
+
+    <section class="records-box">
+
+      <div class="records-title">
+        <span></span>
+        <h1>Hivatalos pályarekordok</h1>
+        <span></span>
+      </div>
+
+      <div class="records-lead">
+        Válassz versenytípust. Kattintásra lenyílik a hozzá tartozó rekordtábla.
+        A zöld nagyító gombbal megnyithatod az adott pálya teljes rekordlistáját.
+      </div>
+
+      <section class="record-cards">
+        <button class="record-card" type="button" data-target="circuit">
+          <img src="ikonok/circuit.png" alt="Circuit ikon">
+          <div class="record-card-text">
+            <h2>Circuit</h2>
+            <p>20 pálya</p>
+            <strong>Best Lap rekordok</strong>
+          </div>
+        </button>
+
+        <button class="record-card" type="button" data-target="sprint">
+          <img src="ikonok/sprint.png" alt="Sprint ikon">
+          <div class="record-card-text">
+            <h2>Sprint</h2>
+            <p>15 pálya</p>
+            <strong>Finish Time rekordok</strong>
+          </div>
+        </button>
+
+        <button class="record-card" type="button" data-target="drag">
+          <img src="ikonok/drag.png" alt="Drag ikon">
+          <div class="record-card-text">
+            <h2>Drag</h2>
+            <p>8 pálya</p>
+            <strong>Finish Time rekordok</strong>
+          </div>
+        </button>
+
+        <button class="record-card" type="button" data-target="drift">
+          <img src="ikonok/drift.png" alt="Drift ikon">
+          <div class="record-card-text">
+            <h2>Drift</h2>
+            <p>10 pálya</p>
+            <strong>Score alapú rekordok</strong>
+          </div>
+        </button>
+
+        <button class="record-card" type="button" data-target="streetx">
+          <img src="ikonok/streetx.png" alt="Street X ikon">
+          <div class="record-card-text">
+            <h2>Street X</h2>
+            <p>12 pálya</p>
+            <strong>Best Lap rekordok</strong>
+          </div>
+        </button>
+
+        <button class="record-card" type="button" data-target="url">
+          <img src="ikonok/url.png" alt="URL ikon">
+          <div class="record-card-text">
+            <h2>URL</h2>
+            <p>5 pálya</p>
+            <strong>Best Lap rekordok</strong>
+          </div>
+        </button>
+      </section>
+
+      <div class="record-panels">
+
+        <section class="record-panel" id="panel-circuit">
+          <div class="record-panel-head">
+            <h2>Circuit rekordok</h2>
+            <span>Best Lap rekordok</span>
+          </div>
+
+          <div class="record-table-wrap">
+            <table class="record-table">
+              <thead>
+                <tr>
+                  <th>Pálya</th>
+                  <th>Best Lap</th>
+                  <th>Játékos</th>
+                  <th>Autó</th>
+                  <th>Dátum</th>
+                  <th>Részletek</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Circuit pálya 1</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-1.html" aria-label="Circuit pálya 1 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 2</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-2.html" aria-label="Circuit pálya 2 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 3</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-3.html" aria-label="Circuit pálya 3 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 4</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-4.html" aria-label="Circuit pálya 4 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 5</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-5.html" aria-label="Circuit pálya 5 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 6</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-6.html" aria-label="Circuit pálya 6 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 7</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-7.html" aria-label="Circuit pálya 7 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 8</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-8.html" aria-label="Circuit pálya 8 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 9</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-9.html" aria-label="Circuit pálya 9 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 10</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-10.html" aria-label="Circuit pálya 10 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 11</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-11.html" aria-label="Circuit pálya 11 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 12</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-12.html" aria-label="Circuit pálya 12 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 13</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-13.html" aria-label="Circuit pálya 13 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 14</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-14.html" aria-label="Circuit pálya 14 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 15</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-15.html" aria-label="Circuit pálya 15 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 16</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-16.html" aria-label="Circuit pálya 16 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 17</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-17.html" aria-label="Circuit pálya 17 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 18</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-18.html" aria-label="Circuit pálya 18 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 19</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-19.html" aria-label="Circuit pálya 19 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Circuit pálya 20</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/circuit-circuit-palya-20.html" aria-label="Circuit pálya 20 részletei"><span>⌕</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="record-panel" id="panel-sprint">
+          <div class="record-panel-head">
+            <h2>Sprint rekordok</h2>
+            <span>Finish Time rekordok</span>
+          </div>
+
+          <div class="record-table-wrap">
+            <table class="record-table">
+              <thead>
+                <tr>
+                  <th>Pálya</th>
+                  <th>Finish Time</th>
+                  <th>Játékos</th>
+                  <th>Autó</th>
+                  <th>Dátum</th>
+                  <th>Részletek</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sprint pálya 1</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-1.html" aria-label="Sprint pálya 1 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 2</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-2.html" aria-label="Sprint pálya 2 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 3</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-3.html" aria-label="Sprint pálya 3 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 4</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-4.html" aria-label="Sprint pálya 4 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 5</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-5.html" aria-label="Sprint pálya 5 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 6</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-6.html" aria-label="Sprint pálya 6 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 7</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-7.html" aria-label="Sprint pálya 7 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 8</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-8.html" aria-label="Sprint pálya 8 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 9</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-9.html" aria-label="Sprint pálya 9 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 10</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-10.html" aria-label="Sprint pálya 10 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 11</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-11.html" aria-label="Sprint pálya 11 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 12</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-12.html" aria-label="Sprint pálya 12 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 13</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-13.html" aria-label="Sprint pálya 13 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 14</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-14.html" aria-label="Sprint pálya 14 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Sprint pálya 15</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/sprint-sprint-palya-15.html" aria-label="Sprint pálya 15 részletei"><span>⌕</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="record-panel" id="panel-drag">
+          <div class="record-panel-head">
+            <h2>Drag rekordok</h2>
+            <span>Finish Time rekordok</span>
+          </div>
+
+          <div class="record-table-wrap">
+            <table class="record-table">
+              <thead>
+                <tr>
+                  <th>Pálya</th>
+                  <th>Finish Time</th>
+                  <th>Játékos</th>
+                  <th>Autó</th>
+                  <th>Dátum</th>
+                  <th>Részletek</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Drag pálya 1</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-1.html" aria-label="Drag pálya 1 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drag pálya 2</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-2.html" aria-label="Drag pálya 2 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drag pálya 3</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-3.html" aria-label="Drag pálya 3 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drag pálya 4</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-4.html" aria-label="Drag pálya 4 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drag pálya 5</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-5.html" aria-label="Drag pálya 5 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drag pálya 6</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-6.html" aria-label="Drag pálya 6 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drag pálya 7</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-7.html" aria-label="Drag pálya 7 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drag pálya 8</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drag-drag-palya-8.html" aria-label="Drag pálya 8 részletei"><span>⌕</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="record-panel" id="panel-drift">
+          <div class="record-panel-head">
+            <h2>Drift rekordok</h2>
+            <span>Score alapú rekordok</span>
+          </div>
+
+          <div class="record-table-wrap">
+            <table class="record-table drift-table">
+              <thead>
+                <tr>
+                  <th>Pálya</th>
+                  <th>Score</th>
+                  <th>Laps Led</th>
+                  <th>Játékos</th>
+                  <th>Autó</th>
+                  <th>Dátum</th>
+                  <th>Részletek</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Drift pálya 1</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-1.html" aria-label="Drift pálya 1 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 2</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-2.html" aria-label="Drift pálya 2 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 3</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-3.html" aria-label="Drift pálya 3 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 4</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-4.html" aria-label="Drift pálya 4 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 5</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-5.html" aria-label="Drift pálya 5 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 6</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-6.html" aria-label="Drift pálya 6 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 7</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-7.html" aria-label="Drift pálya 7 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 8</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-8.html" aria-label="Drift pálya 8 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 9</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-9.html" aria-label="Drift pálya 9 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Drift pálya 10</td>
+                  <td>0</td>
+                  <td>-/-</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/drift-drift-palya-10.html" aria-label="Drift pálya 10 részletei"><span>⌕</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="record-panel" id="panel-streetx">
+          <div class="record-panel-head">
+            <h2>Street X rekordok</h2>
+            <span>Best Lap rekordok</span>
+          </div>
+
+          <div class="record-table-wrap">
+            <table class="record-table">
+              <thead>
+                <tr>
+                  <th>Pálya</th>
+                  <th>Best Lap</th>
+                  <th>Játékos</th>
+                  <th>Autó</th>
+                  <th>Dátum</th>
+                  <th>Részletek</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Street X pálya 1</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-1.html" aria-label="Street X pálya 1 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 2</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-2.html" aria-label="Street X pálya 2 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 3</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-3.html" aria-label="Street X pálya 3 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 4</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-4.html" aria-label="Street X pálya 4 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 5</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-5.html" aria-label="Street X pálya 5 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 6</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-6.html" aria-label="Street X pálya 6 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 7</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-7.html" aria-label="Street X pálya 7 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 8</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-8.html" aria-label="Street X pálya 8 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 9</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-9.html" aria-label="Street X pálya 9 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 10</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-10.html" aria-label="Street X pálya 10 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 11</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-11.html" aria-label="Street X pálya 11 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Street X pálya 12</td>
+                  <td>0:00.00</td>
+                  <td>Játékos neve</td>
+                  <td>Autó</td>
+                  <td>2026.00.00</td>
+                  <td><a class="details-btn" href="rekordok/streetx-street-x-palya-12.html" aria-label="Street X pálya 12 részletei"><span>⌕</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="record-panel" id="panel-url">
+          <div class="record-panel-head">
+            <h2>URL rekordok</h2>
+            <span>Best Lap rekordok</span>
+          </div>
+
+          <div class="record-table-wrap">
+            <table class="record-table">
+              <thead>
+                <tr>
+                  <th>Pálya</th>
+                  <th>Best Lap</th>
+                  <th>Játékos</th>
+                  <th>Autó</th>
+                  <th>Dátum</th>
+                  <th>Részletek</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bayview Speedway Track 1</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-1.html" aria-label="URL pálya 1 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Bayview Speedway Track 2</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-2.html" aria-label="URL pálya 2 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Bayview Speedway Track 3</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-3.html" aria-label="URL pálya 3 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Bayview Speedway Track 4</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-4.html" aria-label="URL pálya 4 részletei"><span>⌕</span></a></td>
+                </tr>
+                <tr>
+                  <td>Bayview Speedway Track 5</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-5.html" aria-label="URL pálya 5 részletei"><span>⌕</span></a></td>
+                </tr>
+				<tr>
+                  <td>Airport Circuit Track 1</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-6.html" aria-label="URL pálya 5 részletei"><span>⌕</span></a></td>
+				<tr>
+                  <td>Airport Circuit Track 2</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-7.html" aria-label="URL pálya 5 részletei"><span>⌕</span></a></td>
+				<tr>
+                  <td>Airport Circuit Track 3</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-8.html" aria-label="URL pálya 5 részletei"><span>⌕</span></a></td>
+				<tr>
+                  <td>Airport Circuit Track 4</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-9.html" aria-label="URL pálya 5 részletei"><span>⌕</span></a></td>
+				<tr>
+                  <td>Airport Circuit Track 5</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-10.html" aria-label="URL pálya 5 részletei"><span>⌕</span></a></td>
+				<tr>
+                  <td>Airport Circuit Track 6</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                  <td><a class="details-btn" href="rekordok/url-url-palya-11.html" aria-label="URL pálya 5 részletei"><span>⌕</span></a></td>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <div class="icon-note">
+        <strong>Ikonok cseréje:</strong>
+        az <b>ikonok</b> mappába másold be a saját képeidet ezekkel a nevekkel:
+        <b>circuit.png</b>, <b>sprint.png</b>, <b>drag.png</b>, <b>drift.png</b>, <b>streetx.png</b>, <b>url.png</b>.
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    NFSU2 Weekly Challenge Hungary © 2026
+  </footer>
+
+  <script src="./korrekordok.js?v=1"></script>
+</body>
+</html>
