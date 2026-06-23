@@ -7,77 +7,54 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-hero">
-    <nav class="topbar">
-      <a class="brand" href="index.html">
-        <span class="brand-main">NFSU2</span>
-        <span class="brand-sub">Weekly Challenge Hungary</span>
+  <header class="hero hero-home">
+    <div class="hero-overlay"></div>
+
+    <nav class="topbar" aria-label="Fő navigáció">
+      <a class="brand" href="index.html" aria-label="NFSU2 Weekly Challenge Hungary főoldal">
+        <span class="brand-big">NFSU2</span>
+        <span class="brand-small">Weekly Challenge<br>Hungary</span>
       </a>
 
-      <button class="menu-toggle" aria-label="Menü megnyitása">☰</button>
-
-      <ul class="nav-links">
-        <li><a class="active" href="index.html">Főoldal</a></li>
-        <li><a href="rolunk.html">Rólunk</a></li>
-        <li><a href="szabalyzat.html">Szabályzat</a></li>
-        <li><a href="heti-versenyek.html">Heti versenyek</a></li>
-        <li><a href="bajnoksag-s1.html">Bajnokság S1</a></li>
-        <li><a href="korrekordok.html">Körrekordok</a></li>
-      </ul>
+      <div class="nav-links">
+        <a class="active" href="index.html">Főoldal</a>
+        <a href="rolunk.html">Rólunk</a>
+        <a href="szabalyzat.html">Szabályzat</a>
+        <a href="heti-versenyek.html">Heti versenyek</a>
+        <a href="bajnoksag-s1.html">Bajnokság S1</a>
+        <a href="korrekordok.html">Körrekordok</a>
+      </div>
     </nav>
 
-    <section class="hero-content">
+    <section class="hero-inner">
       <p class="eyebrow">Welcome back to Bayview</p>
       <h1>Üdvözöllek az <span>NFSU2 Weekly Challenge</span> Hungary oldalán</h1>
       <p class="hero-text">Heti kihívások, versenyek és rekordok a Need for Speed Underground 2 magyar közösségének.</p>
       <div class="hero-actions">
-        <a class="btn primary" href="heti-versenyek.html">Aktuális heti verseny</a>
-        <a class="btn secondary" href="bajnoksag-s1.html">Bajnokság S1</a>
+        <a class="btn btn-primary" href="heti-versenyek.html">Aktuális heti verseny</a>
+        <a class="btn btn-ghost" href="bajnoksag-s1.html">Bajnokság S1</a>
       </div>
     </section>
   </header>
 
-  <main class="main-wrap">
-    <section class="challenge-card">
-      <div class="section-title">
+  <main class="page-wrap home-wrap">
+    <section class="challenge-panel">
+      <div class="panel-heading">
         <p>Week 01</p>
         <h2>Aktuális heti kihívás</h2>
       </div>
 
-      <div class="challenge-layout">
-        <div class="track-preview">
-          <div class="track-image">
-            <span>Resort Loop</span>
-          </div>
+      <div class="current-challenge">
+        <div class="track-card">
+          <span class="track-kicker">Circuit</span>
+          <strong>Resort Loop</strong>
         </div>
 
-        <div class="challenge-info">
-          <div class="info-grid">
-            <article>
-              <small>Autó</small>
-              <strong>Nissan 350Z</strong>
-            </article>
-            <article>
-              <small>Időszak</small>
-              <strong>2026.07.07 – 2026.07.14</strong>
-            </article>
-            <article>
-              <small>Versenyek</small>
-              <strong>Circuit · Drag · Drift</strong>
-            </article>
-            <article>
-              <small>Beküldési határidő</small>
-              <strong>Hétfő 12:00</strong>
-            </article>
-          </div>
-
-          <div class="race-list">
-            <div><span>Circuit</span><b>Resort Loop</b></div>
-            <div><span>Drag</span><b>Bayview Bridge</b></div>
-            <div><span>Drift</span><b>Stadium Drift 2</b></div>
-          </div>
-
-          <a class="btn primary" href="heti-versenyek.html">Részletek megnyitása</a>
+        <div class="challenge-details">
+          <div class="detail-box"><small>Autó</small><strong>Nissan 350Z</strong></div>
+          <div class="detail-box"><small>Időszak</small><strong>2026.07.07 – 2026.07.14</strong></div>
+          <div class="detail-box"><small>Versenyek</small><strong>Circuit · Drag · Drift</strong></div>
+          <div class="detail-box"><small>Beküldési határidő</small><strong>Hétfő 12:00</strong></div>
         </div>
       </div>
     </section>
