@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 760">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1">
+    <stop offset="0" stop-color="#050707"/>
+    <stop offset=".45" stop-color="#111518"/>
+    <stop offset="1" stop-color="#040506"/>
+  </linearGradient>
+  <linearGradient id="carPaint" x1="0" x2="1">
+    <stop offset="0" stop-color="#111"/>
+    <stop offset=".22" stop-color="#d9d9d9"/>
+    <stop offset=".48" stop-color="#777"/>
+    <stop offset=".78" stop-color="#202020"/>
+    <stop offset="1" stop-color="#0b0b0b"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1800" height="760" fill="url(#bg)"/>
+<g opacity=".35">
+  <rect x="90" y="120" width="120" height="530" fill="#151515"/>
+  <rect x="260" y="60" width="95" height="610" fill="#0f1112"/>
+  <rect x="1420" y="100" width="110" height="560" fill="#131313"/>
+  <rect x="1570" y="180" width="75" height="470" fill="#101112"/>
+  <g fill="#9cff00">
+    <rect x="125" y="170" width="10" height="25"/><rect x="165" y="250" width="10" height="25"/>
+    <rect x="286" y="120" width="9" height="22"/><rect x="318" y="205" width="9" height="22"/>
+    <rect x="1450" y="155" width="10" height="25"/><rect x="1490" y="260" width="10" height="25"/>
+  </g>
+</g>
+<path d="M0 590 C320 540 470 635 720 592 C970 548 1150 620 1420 570 C1610 535 1700 555 1800 530 L1800 760 L0 760 Z" fill="#030303"/>
+<path d="M0 620 C330 580 540 650 870 600 C1220 545 1450 620 1800 565" stroke="#9cff00" stroke-width="3" opacity=".45" filter="url(#glow)"/>
+
+<g transform="translate(310 215)">
+  <ellipse cx="610" cy="435" rx="555" ry="36" fill="#9cff00" opacity=".75" filter="url(#glow)"/>
+  <path d="M65 365 L145 283 C230 190 390 162 548 175 L650 98 C745 34 880 56 1008 143 L1190 195 C1285 221 1360 280 1402 354 L1308 392 L150 398 Z"
+        fill="url(#carPaint)" stroke="#e6e6e6" stroke-width="5"/>
+  <path d="M545 175 L662 92 C745 45 875 58 990 139 L1078 184 L725 175 Z"
+        fill="#11181a" stroke="#9cff00" stroke-width="4" opacity=".95"/>
+  <path d="M665 96 C748 56 860 63 963 134 L785 132 L730 169 L580 166 Z" fill="#77fff4" opacity=".42"/>
+  <path d="M1200 234 L1365 288 L1395 348 L1260 340 Z" fill="#ff3428" filter="url(#glow)" opacity=".9"/>
+  <path d="M70 360 L165 325 L260 324 L225 390 L100 386 Z" fill="#cfefff" filter="url(#glow)" opacity=".9"/>
+  <circle cx="300" cy="388" r="88" fill="#050505" stroke="#252525" stroke-width="20"/>
+  <circle cx="300" cy="388" r="50" fill="#131313" stroke="#9cff00" stroke-width="9" filter="url(#glow)"/>
+  <circle cx="1110" cy="388" r="88" fill="#050505" stroke="#252525" stroke-width="20"/>
+  <circle cx="1110" cy="388" r="50" fill="#131313" stroke="#9cff00" stroke-width="9" filter="url(#glow)"/>
+  <path d="M150 276 C350 215 488 205 650 218" stroke="#9cff00" stroke-width="5" opacity=".6" filter="url(#glow)"/>
+  <path d="M715 203 C920 210 1110 236 1278 292" stroke="#9cff00" stroke-width="4" opacity=".5" filter="url(#glow)"/>
+  <path d="M512 393 L900 393" stroke="#9cff00" stroke-width="8" opacity=".9" filter="url(#glow)"/>
+</g>
+<rect width="1800" height="760" fill="#000" opacity=".18"/>
+</svg>
