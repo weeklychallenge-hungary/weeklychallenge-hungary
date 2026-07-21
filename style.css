@@ -1,0 +1,833 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --green:#9cff00;
+  --green2:#5e9700;
+  --bg:#050606;
+  --panel:#080b0c;
+  --line:#303b3d;
+  --line2:#566568;
+  --text:#eeeeee;
+  --muted:#aeb6b8;
+  --red:#ff3b35;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  color:var(--text);
+  font-family:Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 50% -10%,rgba(156,255,0,.07),transparent 32%),
+    linear-gradient(180deg,#070909,#030404 45%,#020303);
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:20;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(to bottom,rgba(255,255,255,.025) 0 1px,transparent 1px 5px),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px);
+}
+
+/* ===== KÖZÖS FEJLÉC ===== */
+
+.hero{
+  height:330px;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.10),rgba(0,0,0,.48)),
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.78)),
+    url("./assets/hero.jpg");
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid rgba(255,255,255,.16);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 78% 70%,rgba(156,255,0,.18),transparent 30%),
+    linear-gradient(90deg,rgba(0,0,0,.18),transparent 42%);
+  pointer-events:none;
+}
+
+.hero-small{
+  height:280px;
+}
+
+.hero-small .hero-content{
+  display:none;
+}
+
+/* ===== FŐOLDALI HERO ===== */
+
+.home-hero{
+  height:520px;
+  display:flex;
+  align-items:flex-end;
+  background-position:center;
+}
+
+.home-hero .hero-content{
+  position:relative;
+  z-index:2;
+  width:min(1440px,calc(100% - 80px));
+  margin:0 auto;
+  padding:42px 0 76px;
+  display:grid;
+  grid-template-columns:310px 1fr;
+  gap:34px;
+  align-items:end;
+  text-transform:uppercase;
+}
+
+.brand-lockup{
+  align-self:start;
+  text-shadow:4px 4px 0 #000,0 0 22px rgba(0,0,0,.9);
+}
+
+.logo-small{
+  color:#e7eeee;
+  font-size:19px;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:6px;
+}
+
+.logo-main{
+  color:#fff;
+  font-size:42px;
+  line-height:.90;
+  font-weight:900;
+  font-style:italic;
+  letter-spacing:-1px;
+}
+
+.logo-sub{
+  color:var(--green);
+  font-size:36px;
+  line-height:.92;
+  font-weight:900;
+  font-style:italic;
+  letter-spacing:1px;
+  text-shadow:4px 4px 0 #000,0 0 18px rgba(156,255,0,.55);
+}
+
+.hero-copy{
+  max-width:720px;
+  text-shadow:4px 4px 0 #000,0 0 22px rgba(0,0,0,.9);
+}
+
+.hero-copy h1{
+  color:#f6fbfb;
+  font-size:48px;
+  line-height:1.02;
+  font-style:italic;
+  letter-spacing:1px;
+}
+
+.hero-copy h1 span{
+  color:var(--green);
+  font-size:56px;
+  text-shadow:4px 4px 0 #000,0 0 18px rgba(156,255,0,.55);
+}
+
+.hero-copy p{
+  max-width:650px;
+  margin-top:16px;
+  color:#f2f7f7;
+  font-size:21px;
+  line-height:1.35;
+  text-transform:none;
+}
+
+.hero-actions{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+
+.btn,
+.wide-btn{
+  min-height:52px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:0 25px;
+  color:#eaf0f0;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:17px;
+  font-weight:900;
+  border:1px solid rgba(255,255,255,.22);
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(0,0,0,.62));
+  box-shadow:0 0 18px rgba(0,0,0,.45),inset 0 0 14px rgba(255,255,255,.03);
+  transition:.16s;
+}
+
+.btn.primary{
+  color:#111;
+  background:linear-gradient(180deg,#dfff62,var(--green) 50%,var(--green2));
+  box-shadow:0 0 24px rgba(156,255,0,.52),inset 0 0 18px rgba(255,255,255,.35);
+}
+
+.btn.secondary::before{
+  content:"🏆";
+}
+
+.btn.primary::before{
+  content:"⚑";
+}
+
+.btn:hover,
+.wide-btn:hover{
+  transform:translateY(-2px);
+  border-color:rgba(156,255,0,.72);
+  box-shadow:0 0 24px rgba(156,255,0,.34), inset 0 0 18px rgba(255,255,255,.05);
+}
+
+/* ===== MENÜ ===== */
+
+.menu{
+  width:min(1440px,calc(100% - 80px));
+  margin:-34px auto 0;
+  position:relative;
+  z-index:5;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  border:1px solid rgba(255,255,255,.22);
+  background:linear-gradient(180deg,rgba(28,34,35,.95),rgba(6,8,9,.98));
+  box-shadow:0 16px 35px rgba(0,0,0,.72);
+}
+
+.menu a{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#e8eeee;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:18px;
+  font-weight:900;
+  border-right:1px solid rgba(255,255,255,.08);
+  transition:.15s;
+}
+
+.menu a:last-child{
+  border-right:0;
+}
+
+.menu a:hover,
+.menu a.active{
+  color:#111;
+  background:linear-gradient(180deg,#dfff62,var(--green) 50%,var(--green2));
+  box-shadow:0 0 22px rgba(156,255,0,.55),inset 0 0 18px rgba(255,255,255,.35);
+}
+
+/* ===== KÖZÖS OLDAL ===== */
+
+.page{
+  width:min(1440px,calc(100% - 80px));
+  margin:28px auto 0;
+}
+
+/* ===== FŐOLDAL ===== */
+
+.home-grid{
+  display:grid;
+  grid-template-columns:1.6fr .72fr .62fr;
+  gap:22px;
+  align-items:stretch;
+}
+
+.challenge-card,
+.standings-card,
+.quick-card{
+  border:1px solid rgba(255,255,255,.22);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018)),
+    radial-gradient(circle at 50% 0,rgba(156,255,0,.10),transparent 30%),
+    rgba(3,6,7,.90);
+  box-shadow:0 16px 44px rgba(0,0,0,.65),inset 0 0 45px rgba(255,255,255,.03);
+}
+
+.challenge-card{
+  padding:30px;
+}
+
+.section-head{
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+.section-head h2{
+  color:var(--green);
+  font-size:31px;
+  font-style:italic;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  text-shadow:3px 3px 0 #000,0 0 15px rgba(156,255,0,.45);
+}
+
+.section-head.compact{
+  padding:0 0 20px;
+}
+
+.status-pills{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.status-pills span,
+.status-pills strong{
+  min-height:35px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 14px;
+  text-transform:uppercase;
+  font-weight:900;
+  border:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(0,0,0,.55));
+}
+
+.status-pills strong{
+  color:#111;
+  border-color:rgba(156,255,0,.60);
+  background:linear-gradient(180deg,#dfff62,var(--green) 50%,var(--green2));
+  box-shadow:0 0 16px rgba(156,255,0,.45);
+}
+
+.home-races{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:22px;
+  border:1px solid rgba(255,255,255,.18);
+}
+
+.race{
+  min-height:375px;
+  padding:26px;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(156,255,0,.12),transparent 25%),
+    linear-gradient(180deg,rgba(255,255,255,.08),rgba(0,0,0,.62));
+  border-right:1px solid rgba(255,255,255,.13);
+}
+
+.race:last-child{
+  border-right:0;
+}
+
+.race-top{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  margin-bottom:22px;
+}
+
+.race-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  color:#d8e1e3;
+  font-size:34px;
+  line-height:1;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(0,0,0,.30);
+  filter:drop-shadow(0 0 8px rgba(156,255,0,.25));
+}
+
+.race h3{
+  color:#f3f7f7;
+  font-size:32px;
+  font-style:italic;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.race h4{
+  color:var(--green);
+  font-size:23px;
+  font-style:italic;
+  text-transform:uppercase;
+  text-shadow:0 0 10px rgba(156,255,0,.4);
+}
+
+.race p{
+  margin-top:13px;
+  color:#d5dddd;
+  font-size:18px;
+  line-height:1.35;
+}
+
+.race b{
+  color:white;
+}
+
+.race-image{
+  height:105px;
+  margin-top:22px;
+  border:1px solid rgba(255,255,255,.18);
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.70)),
+    radial-gradient(circle at 60% 30%,rgba(156,255,0,.20),transparent 45%),
+    linear-gradient(135deg,#172023,#050606);
+  background-size:cover;
+  background-position:center;
+  box-shadow:inset 0 0 22px rgba(0,0,0,.60);
+}
+
+.circuit-img{
+  background-image:
+    linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.72)),
+    url("./assets/resort-loop.jpg"),
+    radial-gradient(circle at 60% 30%,rgba(156,255,0,.20),transparent 45%),
+    linear-gradient(135deg,#172023,#050606);
+}
+
+.drag-img{
+  background-image:
+    linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.72)),
+    url("./assets/bayview-bridge.jpg"),
+    radial-gradient(circle at 60% 30%,rgba(156,255,0,.20),transparent 45%),
+    linear-gradient(135deg,#172023,#050606);
+}
+
+.drift-img{
+  background-image:
+    linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.72)),
+    url("./assets/stadium-drift-2.jpg"),
+    radial-gradient(circle at 60% 30%,rgba(156,255,0,.20),transparent 45%),
+    linear-gradient(135deg,#172023,#050606);
+}
+
+.info-row{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1.25fr;
+  border:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(0,0,0,.62));
+}
+
+.info-row div{
+  min-height:92px;
+  padding:22px 24px;
+  border-right:1px solid rgba(255,255,255,.13);
+}
+
+.info-row div:last-child{
+  border-right:0;
+}
+
+.info-row span{
+  display:block;
+  color:#c5ccce;
+  font-size:16px;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.info-row strong{
+  color:var(--green);
+  font-size:23px;
+  font-style:italic;
+  text-transform:uppercase;
+  text-shadow:0 0 12px rgba(156,255,0,.35);
+}
+
+.wide-btn{
+  width:100%;
+  margin-top:18px;
+}
+
+/* ===== BAJNOKSÁG MINI ===== */
+
+.standings-card,
+.quick-card{
+  padding:30px;
+}
+
+.mini-standings{
+  list-style:none;
+  counter-reset:standing;
+  margin-top:4px;
+}
+
+.mini-standings li{
+  counter-increment:standing;
+  min-height:62px;
+  display:grid;
+  grid-template-columns:42px 1fr auto;
+  align-items:center;
+  gap:12px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  color:#fff;
+  font-size:20px;
+}
+
+.mini-standings li::before{
+  content:counter(standing) ".";
+  color:#fff;
+  font-size:19px;
+  font-weight:900;
+}
+
+.mini-standings li:nth-child(3)::before{
+  color:#ffb000;
+}
+
+.mini-standings span{
+  font-weight:700;
+}
+
+.mini-standings strong{
+  color:#fff;
+  font-size:21px;
+}
+
+.wide-btn.small{
+  min-height:54px;
+  margin-top:28px;
+}
+
+/* ===== GYORS LINKEK ===== */
+
+.quick-links{
+  display:grid;
+  margin-top:2px;
+}
+
+.quick-links a{
+  min-height:64px;
+  display:grid;
+  grid-template-columns:46px 1fr;
+  align-items:center;
+  gap:14px;
+  color:#eaf0f0;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  transition:.15s;
+}
+
+.quick-links a:last-child{
+  border-bottom:0;
+}
+
+.quick-links span{
+  width:36px;
+  height:36px;
+  display:grid;
+  place-items:center;
+  color:#111;
+  background:#dce3e4;
+  font-size:20px;
+  font-weight:900;
+  box-shadow:0 0 12px rgba(255,255,255,.10);
+}
+
+.quick-links strong{
+  font-size:20px;
+}
+
+.quick-links a:hover{
+  color:var(--green);
+  padding-left:8px;
+}
+
+.quick-links a:hover span{
+  background:linear-gradient(180deg,#dfff62,var(--green) 50%,var(--green2));
+  box-shadow:0 0 16px rgba(156,255,0,.50);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  width:min(1440px,calc(100% - 80px));
+  margin:22px auto 0;
+  padding:24px 0 34px;
+  color:#8f9698;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+
+.footer-logo{
+  color:var(--green);
+  font-size:34px;
+  line-height:.85;
+  font-style:italic;
+  font-weight:900;
+  text-transform:uppercase;
+  text-shadow:3px 3px 0 #000,0 0 12px rgba(156,255,0,.35);
+}
+
+footer p{
+  text-align:center;
+  font-size:18px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:1250px){
+  .home-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-races{
+    grid-template-columns:1fr;
+  }
+
+  .race{
+    min-height:auto;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.13);
+  }
+
+  .race:last-child{
+    border-bottom:0;
+  }
+
+  .home-hero .hero-content{
+    grid-template-columns:1fr;
+  }
+
+  .brand-lockup{
+    display:none;
+  }
+}
+
+@media(max-width:1050px){
+  .menu{
+    grid-template-columns:repeat(2,1fr);
+    width:calc(100% - 28px);
+  }
+
+  .page,
+  footer,
+  .home-hero .hero-content{
+    width:calc(100% - 28px);
+  }
+
+  .info-row{
+    grid-template-columns:1fr;
+  }
+
+  .info-row div{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.13);
+  }
+
+  .info-row div:last-child{
+    border-bottom:0;
+  }
+
+  .section-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  footer{
+    flex-direction:column;
+  }
+}
+
+@media(max-width:620px){
+  .hero{
+    height:260px;
+  }
+
+  .home-hero{
+    height:430px;
+  }
+
+  .hero-small{
+    height:230px;
+  }
+
+  .home-hero .hero-content{
+    padding:26px 0 54px;
+  }
+
+  .hero-copy h1{
+    font-size:31px;
+  }
+
+  .hero-copy h1 span{
+    font-size:36px;
+  }
+
+  .hero-copy p{
+    font-size:17px;
+  }
+
+  .menu{
+    margin:-16px auto 0;
+    grid-template-columns:1fr;
+  }
+
+  .menu a{
+    min-height:54px;
+    font-size:16px;
+  }
+
+  .challenge-card,
+  .standings-card,
+  .quick-card{
+    padding:22px 16px;
+  }
+
+  .section-head h2{
+    font-size:26px;
+  }
+
+  .race h3{
+    font-size:25px;
+  }
+
+  .race h4{
+    font-size:19px;
+  }
+
+  .race p,
+  footer p{
+    font-size:16px;
+  }
+
+  .info-row strong{
+    font-size:20px;
+  }
+
+  .footer-logo{
+    font-size:26px;
+  }
+}
+
+/* ===== FŐOLDAL V2 JAVÍTÁS ===== */
+/* A régi hero.jpg már tartalmaz feliratot, ezért a HTML-es hero szöveget nem tesszük rá még egyszer. */
+
+.home-hero{
+  height:390px !important;
+  align-items:stretch !important;
+  background-position:center top !important;
+}
+
+.home-hero .hero-content{
+  display:none !important;
+}
+
+/* A menü kevésbé csússzon rá a bannerre */
+.menu{
+  margin:-20px auto 0 !important;
+}
+
+/* Főoldali rács picit stabilabb, kevésbé zsúfolt */
+.home-grid{
+  grid-template-columns:minmax(0,1.45fr) minmax(300px,.65fr) minmax(270px,.55fr) !important;
+  gap:20px !important;
+}
+
+/* Mivel a pályaképek egyelőre nincsenek feltöltve, a képdobozokat eltüntetjük. */
+.race-image{
+  display:none !important;
+}
+
+.race{
+  min-height:250px !important;
+}
+
+.challenge-card{
+  padding:28px !important;
+}
+
+.home-races{
+  margin-top:20px !important;
+}
+
+.section-head h2{
+  font-size:30px !important;
+}
+
+.info-row{
+  margin-top:18px !important;
+}
+
+.info-row div{
+  min-height:86px !important;
+}
+
+.wide-btn{
+  min-height:50px !important;
+}
+
+/* Jobb oldali kártyák ne nyúljanak feleslegesen */
+.standings-card,
+.quick-card{
+  padding:28px !important;
+}
+
+.quick-links a{
+  min-height:58px !important;
+}
+
+.mini-standings li{
+  min-height:58px !important;
+}
+
+/* Footer rendezettebb */
+footer{
+  align-items:center !important;
+  margin-top:20px !important;
+}
+
+/* Közepes nézetben hamarabb egymás alá törjük, ne legyen zsúfolt */
+@media(max-width:1350px){
+  .home-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .home-races{
+    grid-template-columns:repeat(3,1fr) !important;
+  }
+}
+
+@media(max-width:1050px){
+  .home-races{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media(max-width:620px){
+  .home-hero{
+    height:285px !important;
+  }
+
+  .menu{
+    margin:-12px auto 0 !important;
+  }
+}
